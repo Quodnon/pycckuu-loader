@@ -1,62 +1,62 @@
 module.exports = function(содержимое) {
   [
-    [/внимание\s*\(/g, 'alert('],                        // alert
+    [/увага\s*\(/g, 'alert('],                        // alert
     [/консоль\./g, 'console.'],                          // console
-    [/console\.(логировать|лог)\s*\(/g, 'console.log('], // log
+    [/console\.(гогувати|лог)\s*\(/g, 'console.log('], // log
     [/стоп(;|\s+)/g, 'break$1'],                         // break
-    [/случай\s+/g, 'case '],                             // case
-    [/класс\s+/g, 'class '],                             // class
-    [/поймать\s*\(/g, 'catch('],                         // catch
+    [/випадок\s+/g, 'case '],                             // case
+    [/клас\s+/g, 'class '],                             // class
+    [/схопити|щосьнете\s*\(/g, 'catch('],                         // catch
     [/константа\s+/g, 'const '],                         // const
-    [/продолжить(;|\s+)/g, 'continue$1'],                // continue
-    [/поумолчанию\s*:/g, 'default:'],                    // default
-    [/удалить\s+/g, 'delete '],                          // delete
-    [/сделай(\s*{|\s+)/g, 'do$1'],                       // do
-    [/иначе(\s+|\{)/g, 'else$1'],                        // else
-    [/экспортировать\s+/g, 'export '],                   // export
-    [/\s+расширяет\s+/g, ' extends '],                   // extends
-    [/вконце(\s+|\{)/g, 'finally$1'],                    // finally
+    [/продовжити(;|\s+)/g, 'continue$1'],                // continue
+    [/зазамовчуванням\s*:/g, 'default:'],                    // default
+    [/видалити\s+/g, 'delete '],                          // delete
+    [/зроби(\s*{|\s+)/g, 'do$1'],                       // do
+    [/інакше(\s+|\{)/g, 'else$1'],                        // else
+    [/експортувати\s+/g, 'export '],                   // export
+    [/\s+розширює\s+/g, ' extends '],                   // extends
+    [/вкінці(\s+|\{)/g, 'finally$1'],                    // finally
     [/цикл(\s*\()/g, 'for ('],                           // for
-    [/функция(\s+|\()/g, 'function$1'],                  // function
-    [/если\s*\(/g, 'if ('],                              // if
-    [/импортировать\s+/g, 'import '],                    // import
+    [/функція(\s+|\()/g, 'function$1'],                  // function
+    [/якщо\s*\(/g, 'if ('],                              // if
+    [/імпортувати\s+/g, 'import '],                    // import
     [/\s+в\s+/g, ' in '],                                // in
-    [/\s+экземпляр(\s+|\()/g, ' instanceof$1'],          // instanceo
-    [/пусть\s+/g, 'let '],                               // let
-    [/новый\s+/g, 'new '],                               // new
-    [/\s+из\s+/g, ' of '],                               // of
-    [/вернуть\s+/g, 'return '],                          // return
+    [/\s+екземпляр(\s+|\()/g, ' instanceof$1'],          // instanceo
+    [/нехай\s+/g, 'let '],                               // let
+    [/новий\s+/g, 'new '],                               // new
+    [/\s+з\s+/g, ' of '],                               // of
+    [/повернути\s+/g, 'return '],                          // return
     [/супер\s*\(/g, 'super('],                           // super
-    [/перебрать\s*\(/g, 'switch ('],                     // switch
-    [/тут|этот/g, ' this'],                              // this
-    [/бросить\s+/g, 'throw '],                           // throw
-    [/попробовать(\s+|\s*{)/g, 'try$1'],                 // try
+    [/перебрати\s*\(/g, 'switch ('],                     // switch
+    [/тут|цей|осьоце/g, ' this'],                              // this
+    [/кинути|шпурнути\s+/g, 'throw '],                           // throw
+    [/спробувати|анука(\s+|\s*{)/g, 'try$1'],                 // try
     [/тип(\s+|\s*\()/g, 'typeof$1'],                     // typeof
-    [/пер(еменная)?\s+/g, 'var '],                       // var
+    [/змін(на)?\s+/g, 'var '],                       // var
     [/пусто\s*\(/g, 'void('],                            // void
-    [/пока\s*\(/g, 'while ('],                           // while
-    [/совместно\s*\(/g, 'with ('],                       // with
-    [/уступить\s+/g, 'yield '],                          // yield
-    [/\.сократить\(\)/g, '.pop()'],                      // pop
-    [/\.добавить\(/g, '.push('],                         // push
-    [/\.отразить\(\)/g, '.reverse()'],                   // reverse
-    [/\.сдвинуть\(\)/g, '.shift()'],                     // shift
-    [/\.сортировать\(/g, '.sort('],                      // sort
-    [/\.соединить\(/g, '.splice('],                      // splice
-    [/\.раздвинуть\(/g, '.unshift('],                    // unshift
-    [/\.связать\(/g, '.concat('],                        // concat
-    [/\.объединить\(/g, '.join('],                       // join
-    [/\.срез\(/g, '.slice('],                            // slice
+    [/поки\s*\(/g, 'while ('],                           // while
+    [/з\s*\(/g, 'with ('],                       // with
+    [/поступитись\s+/g, 'yield '],                          // yield
+    [/\.скоротити\(\)/g, '.pop()'],                      // pop
+    [/\.добавити\(/g, '.push('],                         // push
+    [/\.зворотний\(\)/g, '.reverse()'],                   // reverse
+    [/\.зрушити\(\)/g, '.shift()'],                     // shift
+    [/\.сортувати\(/g, '.sort('],                      // sort
+    [/\.зєднати\(/g, '.splice('],                      // splice
+    [/\.роздвинути\(/g, '.unshift('],                    // unshift
+    [/\.звязати\(/g, '.concat('],                        // concat
+    [/\.обєднати\(/g, '.join('],                       // join
+    [/\.зріз\(/g, '.slice('],                            // slice
     [/\.в(c|С)троку\(\)/g, '.toSrtring()'],              // toString
     [/\.номер(В|в)\(/g, '.indexOf('],                    // indexOf
-    [/\.для(К|к)аждого\(/g, '.forEach('],                // forEach
-    [/\.каждый\(/g, '.every('],                          // every
-    [/\.хоть(О|о)дин\(/g, '.some('],                     // some
-    [/\.фильтр\(/g, '.filter('],                         // filter
-    [/\.карта\(/g, '.map('],                             // map
-    [/\.свести\(/g, '.reduce('],                         // reduce
+    [/\.для(К|к)кожного\(/g, '.forEach('],                // forEach
+    [/\.кожний\(/g, '.every('],                          // every
+    [/\.хочаб(О|о)дин\(/g, '.some('],                     // some
+    [/\.фільтр\(/g, '.filter('],                         // filter
+    [/\.мапа\(/g, '.map('],                             // map
+    [/\.звести\(/g, '.reduce('],                         // reduce
     [/\.прототип(\.|\s+)/g, '.prototype$1'],             // prototype
-    [/\.длина/g, '.length'],                             // length
+    [/\.довжина/g, '.length'],                             // length
   ].forEach(function(англ) {
     содержимое = содержимое.replace(англ[0], англ[1]);
   });
