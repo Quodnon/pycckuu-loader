@@ -2,7 +2,7 @@ module.exports = function(содержимое) {
   [
     [/увага\s*\(/g, 'alert('],                        // alert
     [/консоль\./g, 'console.'],                          // console
-    [/console\.(гогувати|лог)\s*\(/g, 'console.log('], // log
+    [/console\.(логувати|лог)\s*\(/g, 'console.log('], // log
     [/стоп(;|\s+)/g, 'break$1'],                         // break
     [/випадок\s+/g, 'case '],                             // case
     [/клас\s+/g, 'class '],                             // class
