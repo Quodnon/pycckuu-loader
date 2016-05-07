@@ -35,7 +35,7 @@ module.exports = function(вміст) {
     [/змін(на)?\s+/g, 'var '],                       // var
     [/пусто\s*\(/g, 'void('],                            // void
     [/поки\s*\(/g, 'while ('],                           // while
-    [/з\s*\(/g, 'with ('],                       // with
+    [/сумісно\s*\(/g, 'with ('],                       // with
     [/поступитись\s+/g, 'yield '],                          // yield
     [/\.скоротити\(\)/g, '.pop()'],                      // pop
     [/\.добавити\(/g, '.push('],                         // push
