@@ -1,4 +1,4 @@
-module.exports = function(содержимое) {
+module.exports = function(вміст) {
   [
     [/увага\s*\(/g, 'alert('],                        // alert
     [/консоль\./g, 'console.'],                          // console
@@ -58,8 +58,8 @@ module.exports = function(содержимое) {
     [/\.прототип(\.|\s+)/g, '.prototype$1'],             // prototype
     [/\.довжина/g, '.length'],                             // length
   ].forEach(function(англ) {
-    содержимое = содержимое.replace(англ[0], англ[1]);
+    вміст = вміст.replace(англ[0], англ[1]);
   });
 
-  return содержимое;
+  return вміст;
 }
