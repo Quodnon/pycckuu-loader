@@ -1,4 +1,4 @@
-# pycckuu-loader
+# ykrainskyi-loader
 
 Loader для Webpack для україніфікації JavaScript. Дозволяє змінити англійські ключові слова на українські.   
    
