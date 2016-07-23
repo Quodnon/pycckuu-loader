@@ -57,8 +57,8 @@ module.exports = function(вміст) {
     [/\.звести\(/g, '.reduce('],                         // reduce
     [/\.прототип(\.|\s+)/g, '.prototype$1'],             // prototype
     [/\.довжина/g, '.length'],                             // length
-    [/\Ганьба\(/g, 'Error('],                             // Error
-    [/\Обіцянк(а|у)\(/g, 'Promise('],                             // Promise
+    [/Ганьба\(/g, 'Error('],                             // Error
+    [/Обіцянк(а|у)\(/g, 'Promise('],                             // Promise
     [/\.виконан(о|а)\(/g, '.then('],                             // then
     [/\.цяцянка\(/g, '.сatch('],                             // catch
     [/\.перемога\(/g, '.accept('],                             // accept
