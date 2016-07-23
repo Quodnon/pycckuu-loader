@@ -104,5 +104,10 @@ map | мапа
 reduce | звести
 prototype | прототип
 length   | довжина
-
+Error | Ганьба
+Promise | Обіцянка
+.then | виконано
+.catch | цяцянка
+.accept | перемога
+.reject | зрада
 

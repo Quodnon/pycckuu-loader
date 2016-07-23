@@ -4,7 +4,7 @@ module.exports = function(вміст) {
     [/консоль\./g, 'console.'],                          // console
     [/console\.(логувати|лог)\s*\(/g, 'console.log('], // log
     [/стоп(;|\s+)/g, 'break$1'],                         // break
-    [/випадок\s+/g, 'case '],                             // case
+    [/випадок|трапилось\s+/g, 'case '],                             // case
     [/клас\s+/g, 'class '],                             // class
     [/схопити|щосьнете\s*\(/g, 'catch('],                         // catch
     [/константа\s+/g, 'const '],                         // const
@@ -15,7 +15,7 @@ module.exports = function(вміст) {
     [/інакше(\s+|\{)/g, 'else$1'],                        // else
     [/експортувати\s+/g, 'export '],                   // export
     [/\s+розширює\s+/g, ' extends '],                   // extends
-    [/вкінці(\s+|\{)/g, 'finally$1'],                    // finally
+    [/вкінці|нарешті(\s+|\{)/g, 'finally$1'],                    // finally
     [/цикл(\s*\()/g, 'for ('],                           // for
     [/функція(\s+|\()/g, 'function$1'],                  // function
     [/якщо\s*\(/g, 'if ('],                              // if
@@ -38,7 +38,7 @@ module.exports = function(вміст) {
     [/сумісно\s*\(/g, 'with ('],                       // with
     [/поступитись\s+/g, 'yield '],                          // yield
     [/\.скоротити\(\)/g, '.pop()'],                      // pop
-    [/\.добавити\(/g, '.push('],                         // push
+    [/\.добавити|запхати\(/g, '.push('],                         // push
     [/\.зворотний\(\)/g, '.reverse()'],                   // reverse
     [/\.зрушити\(\)/g, '.shift()'],                     // shift
     [/\.сортувати\(/g, '.sort('],                      // sort
@@ -57,6 +57,12 @@ module.exports = function(вміст) {
     [/\.звести\(/g, '.reduce('],                         // reduce
     [/\.прототип(\.|\s+)/g, '.prototype$1'],             // prototype
     [/\.довжина/g, '.length'],                             // length
+    [/\Ганьба\(/g, 'Error('],                             // Error
+    [/\Обіцянк(а|у)\(/g, 'Promise('],                             // Promise
+    [/\.виконан(о|а)\(/g, '.then('],                             // then
+    [/\.цяцянка\(/g, '.сatch('],                             // catch
+    [/\.перемога\(/g, '.accept('],                             // accept
+    [/\.зрада\(/g, '.reject('],                             // reject
   ].forEach(function(англ) {
     вміст = вміст.replace(англ[0], англ[1]);
   });
